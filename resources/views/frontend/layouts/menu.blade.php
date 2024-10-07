@@ -4,7 +4,8 @@ MENU START
     <div class="container">
         <a class="navbar-brand" href="index.html">
             {{--  <img src="{{ $settings->site_name }}" alt="{{ $settings->site_name }}" class="img-fluid">  --}}
-            <p>Foodbar</p>
+            {{-- <p>Foodbar</p> --}}
+            <img src="{{asset('frontend/images/logo_465x320.png')}}" alt="055 Foodbar" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
