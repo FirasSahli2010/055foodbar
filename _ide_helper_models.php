@@ -151,17 +151,17 @@ namespace App\Models{
  * @property string $status
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Illuminate\Database\Eloquent\Builder|category newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|category newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|category query()
- * @method static \Illuminate\Database\Eloquent\Builder|category whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|category whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|category whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|category whereSlug($value)
- * @method static \Illuminate\Database\Eloquent\Builder|category whereStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|category whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Category newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Category query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereUpdatedAt($value)
  */
-	class category extends \Eloquent {}
+	class Category extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -224,7 +224,7 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\productImageGallery> $ProductImageGalleries
  * @property-read int|null $product_image_galleries_count
- * @property-read \App\Models\category|null $category
+ * @property-read \App\Models\Category|null $category
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\ProductOption> $productoption
  * @property-read int|null $productoption_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\productVariant> $variants
@@ -315,21 +315,21 @@ namespace App\Models{
  * @property int|null $status
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Illuminate\Database\Eloquent\Builder|slider newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|slider newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|slider query()
- * @method static \Illuminate\Database\Eloquent\Builder|slider whereBanner($value)
- * @method static \Illuminate\Database\Eloquent\Builder|slider whereBtnUrl($value)
- * @method static \Illuminate\Database\Eloquent\Builder|slider whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|slider whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|slider whereImage($value)
- * @method static \Illuminate\Database\Eloquent\Builder|slider whereSerial($value)
- * @method static \Illuminate\Database\Eloquent\Builder|slider whereStartingPrice($value)
- * @method static \Illuminate\Database\Eloquent\Builder|slider whereStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|slider whereTitle($value)
- * @method static \Illuminate\Database\Eloquent\Builder|slider whereType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|slider whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider whereBanner($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider whereBtnUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider whereSerial($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider whereStartingPrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Slider whereUpdatedAt($value)
  */
-	class slider extends \Eloquent {}
+	class Slider extends \Eloquent {}
 }
 

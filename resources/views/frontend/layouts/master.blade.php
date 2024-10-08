@@ -28,6 +28,7 @@
 </head>
 
 <body>
+    <div class="row" >
     <header>
     <div class="overlay-container d-none">
         <div class="overlay">
@@ -50,23 +51,17 @@
 
     {{-- TOPBAR START --}}
     <section class="fp__topbar">
-        <div class="container row col-12">
-            <div class = "col-3">&nbsp;</div>
-            <div class=" col-9">
-                <div class="col-xl-6 col-md-8" style="color: #FFFFFF">
+        <div class="col-12">
+            <div class="row container">
+                <div style="color: #FFFFFF">
                     <ul class="fp__topbar_info d-flex flex-wrap" >
-                        <li style="color: #FFFFFF"><a href="mailto:info@055Foodbar.nl" style="color: #FFFFFF"><i class="fas fa-envelope"style="color: #FFFFFF"></i>amer277999@gmail.com</a>
+                        <li style="color: #FFFFFF">
+                            <a href="mailto:info@055Foodbar.nl" style="color: #FFFFFF">
+                            <i class="fas fa-envelope"style="color: #FFFFFF"></i>amer277999@gmail.com</a>
                         </li>
-                        <li><a href="callto:123456789" style="color: #FFFFFF"><i class="fas fa-phone-alt" style="color: #FFFFFF"></i> 06123456789</a></li>
-                    </ul>
-                </div>
-                <div class="col-xl-6 col-md-4 d-none d-md-block">
-                    <ul class="topbar_icon d-flex flex-wrap">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a> </li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a> </li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a> </li>
-                        {{--<li><a href="#"><i class="fab fa-linkedin-in"></i></a> </li> --}}
-                        {{--<li><a href="#"><i class="fab fa-behance"></i></a> </li>--}}
+                        <li style="color: #FFFFFF">
+                            <a href="callto:123456789" style="color: #FFFFFF"><i class="fas fa-phone-alt" style="color: #FFFFFF"></i> 06123456789</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -88,6 +83,7 @@
     {{-- SCROLL BUTTON START --}}
     <div class="fp__scroll_btn">
         go to top
+    </div>
     </div>
     {{--SCROLL BUTTON END--}}
   {{-- jquery library js --}}

@@ -1,5 +1,3 @@
-BANNER START
-==============================-->
 <section class="fp__banner" style="background: url(frontend/images/banner2_img_2.jpg);">
 
     <div class="fp__banner_overlay">

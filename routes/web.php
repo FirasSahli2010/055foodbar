@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\CartController;
 use App\Http\Controllers\frontend\MenuController;
 use App\Http\Controllers\frontend\MollieController;
+use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\PayPalController;
 
 /*
@@ -60,7 +61,7 @@ Route::resource('afspraak', AfspraakController::class);
 
 /** shoppingcart frontend */
 require __DIR__.'/auth.php';
-Route::get('/',[FrontendController::class,'index'])->name('home');
+Route::get('/',[HomePageController::class,'index'])->name('home');
 Route::get('product-detail/{slug}', [FrontendController::class, 'showProduct'])->name('product-detail');
 /**Route shoppingCart**/
 Route::get('/load-product-modal/{productId}', [FrontendController::class, 'loadProductModal'])->name('load-product-modal');

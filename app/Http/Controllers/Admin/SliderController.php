@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\DataTables\SliderDataTable;
 use App\Http\Controllers\Controller;
-use App\Models\slider;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 use App\Traits\ImageUploadTrait; //opmerk
 class SliderController extends Controller
@@ -37,7 +37,7 @@ class SliderController extends Controller
             'status' =>['required'],
         ]);
 
-        $slider = new slider();
+        $slider = new Slider();
 
         /***handel file Upload***/
         $imagePath = $this->uploadImage($request, 'banner', 'uploads');
@@ -71,7 +71,7 @@ class SliderController extends Controller
      */
     public function edit(string $id)
     {
-       $slider = slider::findOrFail($id);
+       $slider = Slider::findOrFail($id);
        return view('admin.slider.edit', compact('slider'));
     }
 

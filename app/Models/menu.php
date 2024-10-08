@@ -12,6 +12,4 @@ class Menu extends Model
     {
         return $this->belongsTo(category::class);
     }
-
-
 }

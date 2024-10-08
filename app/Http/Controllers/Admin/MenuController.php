@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Menu;
 use App\DataTables\PageMenuDataTable;
-use App\Models\category;
+use App\Models\Category;
 use App\Models\productImageGallery;
 use App\Models\ProductVariantItem;
 use App\Traits\ImageUploadTrait;

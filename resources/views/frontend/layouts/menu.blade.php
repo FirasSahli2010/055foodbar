@@ -1,15 +1,6 @@
 {{-- Top menu --}}
 <nav class="navbar navbar-expand-lg main_menu">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
-            {{--  <img src="{{ $settings->site_name }}" alt="{{ $settings->site_name }}" class="img-fluid">  --}}
-            {{-- <p>Foodbar</p> --}}
-            <img src="{{asset('frontend/images/logo_465x320.png')}}" alt="055 Foodbar" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="far fa-bars"></i>
-        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item">
@@ -26,6 +17,15 @@
                     <a class="nav-link" href="contact.html">contact</a>
                 </li>
             </ul>
+            <a class="navbar-brand" href="index.html">
+                {{--  <img src="{{ $settings->site_name }}" alt="{{ $settings->site_name }}" class="img-fluid">  --}}
+                {{-- <p>Foodbar</p> --}}
+                <img src="{{asset('frontend/images/logo_465x320.png')}}" alt="055 Foodbar" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="far fa-bars"></i>
+            </button>
             <ul class="menu_icon d-flex flex-wrap">
                 <li>
                     <a href="#" class="menu_search"><i class="far fa-search"></i></a>
@@ -40,8 +40,7 @@
 
                 {{-- couter product --}}
                 <li>
-                    <a class="cart_icon"><i class="fas fa-shopping-basket"></i> <span
-                            class="cart_count">{{ Cart::content()->count() }}</span></a>
+                    <a class="cart_icon"><i class="fas fa-shopping-basket"></i><span class="cart_count">{{ Cart::content()->count() }}</span></a>
                 </li>
 
                 <li>
@@ -49,9 +48,13 @@
                 </li>
 
                 <li>
-                    <a class="common_btn" href="#" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">reservation</a>
+                    <a class="common_btn" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">reservation</a>
                 </li>
+                <li  ><a href="#" class="common_btn"><i class="fab fa-facebook-f"></i></a> </li>
+                <li  ><a href="#" class="common_btn"><i class="fab fa-twitter"></i></a> </li>
+                <li  ><a href="#" class="common_btn"><i class="fab fa-instagram"></i></a> </li>
+                {{--<li><a href="#"><i class="fab fa-linkedin-in"></i></a> </li> --}}
+                {{--<li><a href="#"><i class="fab fa-behance"></i></a> </li>--}}
             </ul>
         </div>
     </div>

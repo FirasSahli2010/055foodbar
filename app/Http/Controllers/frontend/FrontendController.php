@@ -4,9 +4,9 @@ namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\about;
-use App\Models\category;
+use App\Models\Category;
 use App\Models\coupon;
-use App\Models\slider;
+use App\Models\Slider;
 use App\Models\product;
 use App\Models\productImageGallery;
 use App\Models\ProductOption;
@@ -20,12 +20,9 @@ class FrontendController extends Controller
 {
     public function index()
     {
-
-        $slider = slider::where('status', 1)->orderBy('serial', 'asc')->get();
+        $slider = Slider::where('status', 1)->orderBy('serial', 'asc')->get();
         $about = about::where('status', 1)->get();
-        $categories = category::where('status', 1)->get();
-
-
+        $categories = Category::where('status', 1)->get();
         return view('frontend.home.index', compact('slider', 'about', 'categories'));
     }
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\DataTables\categoryDataTable;
-use App\Models\category;
+use App\Models\Category;
 use Str;
 
 class CategoryController extends Controller

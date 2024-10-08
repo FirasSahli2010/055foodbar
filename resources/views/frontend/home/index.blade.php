@@ -4,30 +4,19 @@
 
 @include('frontend.home.components.slider');
 
+{{-- MENU ITEM START --}}
+@include('frontend.home.components.menu-item')
+{{-- MENU ITEM END --}}
 
 {{-- WHY CHOOSE START --}}
-@include('frontend.home.components.why-as')
+{{-- @include('frontend.home.components.why-as') --}}
 {{-- WHY CHOOSE END --}}
 
 
-{{-- 
-    OFFER ITEM START
---}}
+{{-- OFFER ITEM START --}}
 @include('frontend.home.components.offer-item')
 
 {{-- OFFER ITEM END --}}
-
-
-
-
-
-{{-- 
-    MENU ITEM START
---}}
-@include('frontend.home.components.menu-item')
-{{-- 
-    MENU ITEM END
---}}
 
 
 {{-- 

@@ -8,7 +8,7 @@ function checkDiscount($product)
 {
     $currentDate = date('Y-m-d');
 
-    if ($product->offer_price > 0 && $currentDate >= $product->offer_start_date && $currentDate <= $product->offer_end_date) {
+    if ($product->offer_price > 0 && $currentDate >= $product->offer_start_date && $currentDate <= $product->offer_end_date && $product->offer_price != $product->price) {
         return true;
     }
     return false;
