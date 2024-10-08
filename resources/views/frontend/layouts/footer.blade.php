@@ -9,12 +9,12 @@
                         </a>
                         <span>There are many variations of Lorem Ipsum available, but the majority have
                             suffered.</span>
-                        <p class="info"><i class="far fa-map-marker-alt"></i> 7232 Broadway Suite 308, Jackson
-                            Heights, 11372, NY, United States</p>
+                        <p class="info"><i class="far fa-map-marker-alt"></i> Beekstraat 32A
+                        7311LG Apeldoorn</p>
                         <a class="info" href="callto:1234567890123"><i class="fas fa-phone-alt"></i>
                             +1347-430-9510</a>
-                        <a class="info" href="mailto:websolutionus1@gmail.com"><i class="fas fa-envelope"></i>
-                            websolutionus1@gmail.com</a>
+                        <a class="info" href="mailto:amer277999@gmail.com"><i class="fas fa-envelope"></i>
+                        amer277999@gmail.com</a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-4 col-md-6">

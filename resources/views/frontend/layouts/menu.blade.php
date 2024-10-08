@@ -1,5 +1,4 @@
-MENU START
-==============================-->
+{{-- Top menu --}}
 <nav class="navbar navbar-expand-lg main_menu">
     <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -81,12 +80,12 @@ MENU START
                             href="{{ route('product-detail', $cartProduct->options->product_info['slug']) }}">{!! $cartProduct->name !!}</a>
 
                         <p class="size">Aantal: {{ $cartProduct->qty }}</p>
-                        {{-- ماتنسا تزبيط الأيكون تبع ليورو --}}
+
                         <p class="size">{{ @$cartProduct->options->product_size['name'] }}
                             {{ $settings->currency_icon }}
-                            {{ @$cartProduct->options->product_size['price']
+                            {{ @$cartProduct->options->product_size['price'] 
                                 ? '(' . @$cartProduct->options->product_size['price'] . ')'
-                                : '' }}
+                                : '' }} &euro;
                         </p>
 
                         {{-- select opttions --}}
@@ -108,7 +107,7 @@ MENU START
         <p class="subtotal">subtotal <span class="cart_subtotal">{{ $settings->currency_icon }}{{cartTotal()}}
             </span></p>
         <a class="cart_view" href="{{route('cart.index')}}"> WinkelWagen</a>
-        <a class="checkout" href="check_out.html">checkout</a>
+        <a class="checkout" href="/cheak-out-page">checkout</a>
 
 
     </div>

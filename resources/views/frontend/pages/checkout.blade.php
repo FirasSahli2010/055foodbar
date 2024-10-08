@@ -1,8 +1,8 @@
 @extends('frontend.layouts.master')
 @section('content')
-    <!--=============================
+    {{--=
                 BREADCRUMB START
-            ==============================-->
+            --}}
     <section class="fp__breadcrumb" style="background: url({{ asset('frontend/images/counter_bg.jpg') }});">
         <div class="fp__breadcrumb_overlay">
             <div class="container">
@@ -16,15 +16,17 @@
             </div>
         </div>
     </section>
-    <!--=============================
+    {{--
                 BREADCRUMB END
-            ==============================-->
+            --}}
 
 
-    <!--============================
+    {{--
                 CHECK OUT PAGE START
-            ==============================-->
+            --}}
     <section class="fp__cart_view mt_125 xs_mt_95 mb_100 xs_mb_70">
+    <form action="{{ route('address.store') }}" method="POST">
+                                                        @csrf
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-7 wow fadeInUp" data-wow-duration="1s">
@@ -49,8 +51,7 @@
                                             <div class="modal-body">
 
                                                 <div class="fp_dashboard_new_address d-block ">
-                                                    <form action="{{ route('address.store') }}" method="POST">
-                                                        @csrf
+                                                    
                                                         <div class="row">
                                                             <div class="col-12">
                                                                 <h4>add new address</h4>
@@ -129,7 +130,8 @@
                                                                     address</button>
                                                             </div>
                                                         </div>
-                                                    </form>
+                                                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -189,10 +191,11 @@
                 </div>
             </div>
         </div>
+    </form>
     </section>
-    <!--============================
+    {{--
                 CHECK OUT PAGE END
-            ==============================-->
+            --}}
 @endsection
 
 @push('scripts')

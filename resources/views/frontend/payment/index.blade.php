@@ -28,6 +28,13 @@
             <div class="col-lg-8">
                 <div class="fp__payment_area">
                     <div class="row">
+                    <form action="{{ route('paypal.payment') }}" method="GET">
+        <button type="submit" class="btn btn-primary">
+        <img src="{{asset('frontend/images/pay_1.jpg')}}" alt="payment method"
+        class="img-fluid w-100">
+            Pay Now PayPal
+        </button>
+    </form>
 
                         <div class="col-lg-3 col-6 col-sm-4 col-md-3 wow fadeInUp" data-wow-duration="1s">
                             <a class="fp__single_payment payment-card" data-name="paypal" data-bs-toggle="modal"
@@ -37,10 +44,15 @@
 
                             </a>
                         </div>
-
+                        <form action="{{ route('payment.create') }}" method="GET">
+                            <button type="submit" class="btn btn-primary">
+                            <img src="{{asset('frontend/images/ideal_images_alt-payments_ideal.jpg')}}" alt="payment method" class="img-fluid w-100">
+                                Pay Now
+                            </button>
+                        </form>
                         <div class="col-lg-3 col-6 col-sm-4 col-md-3 wow fadeInUp" data-wow-duration="1s">
-                            <a class="fp__single_payment payment-card" data-name="mollie" data-bs-toggle="modal">
-                                <img src="{{asset('frontend/images/ideal_images_alt-payments_ideal.jpg')}}"alt="payment method" class="img-fluid w-100">
+                        <a class="fp__single_payment payment-card" data-name="mollie" data-bs-toggle="modal">
+                                <img src="{{asset('frontend/images/ideal_images_alt-payments_ideal.jpg')}}" alt="payment method" class="img-fluid w-100">
                             </a>
                         </div>
 

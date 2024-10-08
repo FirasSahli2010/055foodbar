@@ -14,13 +14,13 @@
         </div>
     </div>
 </section>
-<!--=============================
+{{--=
                 BREADCRUMB END
-            ==============================-->
+            --}}
 
-<!--============================
+{{--
                 CART VIEW START
-            ==============================-->
+            --}}
 <section class="fp__cart_view mt_125 xs_mt_95 mb_100 xs_mb_70">
     <div class="container">
         <div class="row">
@@ -151,6 +151,7 @@
 
                     {{-- form codepon --}}
                     <form id="coupon_form">
+                        @csrf
                         <input type="text" id="coupon_code" placeholder="Coupon Code" name="code">
                         <button type="submit">apply</button>
                     </form>
@@ -178,9 +179,9 @@
 
 
 </section>
-<!--============================
+{{--
                 CART VIEW END
-            ==============================-->
+            --}}
 @endsection
 @push('scripts')
 <script>

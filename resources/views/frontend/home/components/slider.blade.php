@@ -15,7 +15,7 @@ BANNER START
                                 <div class="fp__banner_img wow fadeInLeft" data-wow-duration="1s">
                                     <div class="img">
                                         <img src="{{$item->image}}" alt="food item" class="img-fluid w-100">
-                                        <span> {{$item->starting_price }}$ </span>
+                                        <span> {{$item->starting_price }}&euro; </span>
                                     </div>
                                 </div>
                             </div>
