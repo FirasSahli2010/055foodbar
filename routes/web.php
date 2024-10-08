@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\CartController;
 use App\Http\Controllers\frontend\MenuController;
 use App\Http\Controllers\frontend\MollieController;
+use App\Http\Controllers\PayPalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -100,15 +101,18 @@ Route::group(['middleware'=> 'auth'], function(){
     Route::post('/order/{id}/update-payment-status', [PaymentController::class, 'updatePaymentStatus']);
 
     /** Mollie Routes */
-    Route::get('/mollie-payment', [PaymentController::class, 'payWithmollie'])->name('mollie.payment');
-    Route::get('mollie/success', [PaymentController::class, 'success'])->name('mollie.success');
+    // Route::get('/mollie-payment', [PaymentController::class, 'payWithmollie'])->name('mollie.payment');
+    // Route::get('mollie/success', [PaymentController::class, 'success'])->name('mollie.success');
     // Route::get('mollie/cancel', [PaymentController::class, 'cancel'])->name('mollie.cancel');
     // Route::post('/webhook/mollie', [PaymentController::class, 'handleWebhook']);
 
+    Route::get('/mollie-payment', [PaymentController::class, 'payWithmollie'])->name('payment.create');
+    Route::get('mollie/success', [PaymentController::class, 'success'])->name('payment.success');
 
 
-
-
+    Route::get('/paypal/payment', [PayPalController::class, 'createPayment'])->name('paypal.payment');
+    Route::get('/paypal/success', [PayPalController::class, 'paymentSuccess'])->name('paypal.success');
+    Route::get('/paypal/cancel', [PayPalController::class, 'paymentCancel'])->name('paypal.cancel');
 
 });
 
