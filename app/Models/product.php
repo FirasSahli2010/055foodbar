@@ -9,19 +9,17 @@ class product extends Model
 {
     use HasFactory;
 
-    public function category(){
-
+    public function category()
+    {
         return $this->belongsTo(category::class);
-
     }
 
-    public function menu(){
-
-        return $this->belongsTo(menu::class);
-
+    public function menu()
+    {
+        return $this->belongsTo(Menu::class);
     }
-    public function ProductImageGalleries(){
-
+    public function ProductImageGalleries()
+    {
         return $this->hasMany(productImageGallery::class);
     }
 
@@ -29,15 +27,8 @@ class product extends Model
         return $this->hasMany(ProductVariantItem::class);
     }
 
-    public function productoption(){
-
+    public function productoption()
+    {
         return $this->hasMany(ProductOption::class);
-
     }
-
-
-
-
-
-
 }

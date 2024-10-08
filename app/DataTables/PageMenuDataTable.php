@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\menu;
+use App\Models\Menu;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -84,7 +84,7 @@ class PageMenuDataTable extends DataTable
     /**
      * Get the query source of dataTable.
      */
-    public function query(menu $model): QueryBuilder
+    public function query(Menu $model): QueryBuilder
     {
         return $model->newQuery();
     }

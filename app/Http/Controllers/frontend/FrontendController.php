@@ -31,10 +31,24 @@ class FrontendController extends Controller
 
     public function showProduct(string $slug)
     {
-        $product = product::with(['category', 'ProductImageGalleries', 'productoption', 'productsize'])->where('slug', $slug)->where('status', 1)->first();
-
+        $product = product::with(
+            [
+                            'category', 
+                            'ProductImageGalleries', 
+                            'productoption', 
+                            'productsize'
+                        ])
+                        ->where('slug', $slug)
+                        ->where('status', 1)
+                        ->first();
         /**لعرض نفس المنتجات الشبيهه بالمنتج */
-        $relatedProducts = product::where('category_id', $product->category_id)->where('id', '!=', $product->id)->take(8)->latest()->get();
+        $relatedProducts = product::where('category_id', $product->category_id)
+                                    ->where('id', '!=', $product->id)
+                                    
+                                    ->latest()
+                                    ->get();
+
+                                    // ->take(8)
         return view('frontend.pages.product-detail', compact('product', 'relatedProducts'));
     }
 

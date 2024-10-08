@@ -4,7 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\menu;
+use App\Models\Menu;
 use App\DataTables\PageMenuDataTable;
 use App\Models\category;
 use App\Models\productImageGallery;
@@ -46,7 +46,7 @@ class MenuController extends Controller
             'status'=>['required']
          ]);
 
-         $product = new menu();
+         $product = new Menu();
           /** Handlle file upload تابع لملف تارتس بملف الأب* */
         $imagePath = $this->uploadImage($request, 'thumb_image', 'uploads');
 
@@ -79,7 +79,7 @@ class MenuController extends Controller
      */
     public function edit(string $id)
     {
-        $product = menu::findOrFail($id);
+        $product = Menu::findOrFail($id);
         $categories = category::all();
         return view('admin.product.menu.edit',compact('categories','product'));
     }
@@ -98,7 +98,7 @@ class MenuController extends Controller
             'long_description'=>['required'],
             'status'=>['required']
          ]);
-         $product = menu::findOrFail($id);
+         $product = Menu::findOrFail($id);
 
        $imagePath = $this->updateImage($request, 'thumb_image', 'uploads',  $product->thumb_image);
 
@@ -124,7 +124,7 @@ class MenuController extends Controller
     public function destroy(string $id)
     {
 
-        $product = menu::findOrFail($id);
+        $product = Menu::findOrFail($id);
 
         $this->deleteImage($product->thumb_image);
 
@@ -143,7 +143,7 @@ class MenuController extends Controller
 
     public function changeStatus(Request $request)
     {
-        $product = menu::findOrFail($request->id);
+        $product = Menu::findOrFail($request->id);
         $product->status = $request->status == 'true' ? 1 : 0;
         $product->save();
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\DataTables\menuVariantItemDataTable;
-use App\Models\menu;
+use App\Models\Menu;
 use App\Models\MenuVariantitem;
 use App\Models\product;
 
@@ -13,12 +13,12 @@ class MenuVariantItemController extends Controller
 {
     public function index(menuVariantItemDataTable $dataTable, $productId)
     {
-        $product = menu::findOrFail($productId);
+        $product = Menu::findOrFail($productId);
         return $dataTable->render('admin.product.menu.product-variant-item.index', compact('product'));
     }
 
     public function create( string $productId){
-        $product = menu::findOrFail($productId);
+        $product = Menu::findOrFail($productId);
 
         return view('admin.product.menu.product-variant-item.create',compact('product'));
     }

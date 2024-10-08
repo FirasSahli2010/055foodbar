@@ -5,13 +5,13 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\DataTables\menuOptionDataTable;
-use App\Models\menu;
+use App\Models\Menu;
 use App\Models\MenuOption;
 
 class MenuOptionController extends Controller
 {
     public function index(menuOptionDataTable $dataTable, $productId){
-         $product = menu::findOrFail($productId);
+         $product = Menu::findOrFail($productId);
         return $dataTable->render('admin.product.menu.product-variant-options.index',compact('product'));
 
     }
@@ -20,7 +20,7 @@ class MenuOptionController extends Controller
     public function create(string $productId){
 
 
-        $product = menu::findOrFail($productId);
+        $product = Menu::findOrFail($productId);
 
         return view('admin.product.menu.product-variant-options.create',compact('product'));
         }
@@ -54,7 +54,7 @@ class MenuOptionController extends Controller
              public function edit(string $productId){
 
                 $productoption = MenuOption::findOrFail($productId);
-                $product = menu::findOrFail($productId);
+                $product = Menu::findOrFail($productId);
 
                 return view('admin.product.product-variant-options.edit',compact('productoption','product'));
              }
