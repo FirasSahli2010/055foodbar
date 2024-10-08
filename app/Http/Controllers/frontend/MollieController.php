@@ -28,7 +28,8 @@ public function paymentWithMollie()
         ],
         "description" => "OrderNummr:$invoice",
 
-        "redirectUrl" => route('mollie.success'),
+        // "redirectUrl" => route('mollie.success'),
+        "redirectUrl" => route('payment.success'),
         "redirectUrl" => route('mollie.cancel'),
         //"webhookUrl" => route('webhooks.mollie'),
         "metadata" => [

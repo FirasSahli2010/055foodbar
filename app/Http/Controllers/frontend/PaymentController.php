@@ -72,7 +72,8 @@ class PaymentController extends Controller
             ],
 
             "description" => "OrderNummr:$invoice",
-            "redirectUrl" => route('mollie.success'),
+            // "redirectUrl" => route('mollie.success'),
+            "redirectUrl" => route('payment.success'),
             // "redirectUrl" => route('mollie.cancel'),
             // "webhookUrl" => route('webhooks.mollie'),
             "metadata" => [
@@ -99,8 +100,16 @@ class PaymentController extends Controller
                 return view('frontend/payment.payment-cancel');
             }
         }
+    }
 
+    public function paymentWebhook(Request $request)
+    {
+        $payment = Mollie::api()->payments()->get($request->id);
 
+        if ($payment->isPaid()) {
+            // Logica voor succesvolle betaling (bijv. bestelling markeren als betaald)
+        }
 
+        return response()->json(['status' => 'ok']);
     }
 }
