@@ -28,63 +28,62 @@
 </head>
 
 <body>
-    <div class="row" >
-    <header>
-    <div class="overlay-container d-none">
-        <div class="overlay">
-            <span class="loader"></span>
+        <header>
+        <div class="overlay-container d-none">
+            <div class="overlay">
+                <span class="loader"></span>
+            </div>
         </div>
-    </div>
 
-    {{--coument cart pop om te loop in alle page --}}
-    <div class="fp__cart_popup">
-        <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body load_product_model_body">
+        {{--coument cart pop om te loop in alle page --}}
+        <div class="fp__cart_popup">
+            <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body load_product_model_body">
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    {{-- TOPBAR START --}}
-    <section class="fp__topbar">
-        <div class="col-12">
-            <div class="row container">
-                <div style="color: #FFFFFF">
-                    <ul class="fp__topbar_info d-flex flex-wrap" >
-                        <li style="color: #FFFFFF">
-                            <a href="mailto:info@055Foodbar.nl" style="color: #FFFFFF">
-                            <i class="fas fa-envelope"style="color: #FFFFFF"></i>amer277999@gmail.com</a>
-                        </li>
-                        <li style="color: #FFFFFF">
-                            <a href="callto:123456789" style="color: #FFFFFF"><i class="fas fa-phone-alt" style="color: #FFFFFF"></i> 06123456789</a>
-                        </li>
-                    </ul>
+        {{-- TOPBAR START --}}
+        <section class="fp__topbar">
+            <div class="col-12">
+                <div class="row container">
+                    <div style="color: #FFFFFF">
+                        <ul class="fp__topbar_info d-flex flex-wrap" >
+                            <li style="color: #FFFFFF">
+                                <a href="mailto:info@055Foodbar.nl" style="color: #FFFFFF">
+                                <i class="fas fa-envelope"style="color: #FFFFFF"></i>amer277999@gmail.com</a>
+                            </li>
+                            <li style="color: #FFFFFF">
+                                <a href="callto:123456789" style="color: #FFFFFF"><i class="fas fa-phone-alt" style="color: #FFFFFF"></i> 06123456789</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    {{-- Tobbar End --}} 
+        {{-- Tobbar End --}} 
 
         @include('frontend.layouts.menu');
 
         </header>
 
-    @yield('content')
+         @yield('content')
 
     {{-- FOOTER START --}}
         @include('frontend.layouts.footer')
     {{--FOOTER END--}}
 
     {{-- SCROLL BUTTON START --}}
-    <div class="fp__scroll_btn">
-        go to top
-    </div>
-    </div>
+        <div class="fp__scroll_btn">
+            go to top
+        </div>
+    
     {{--SCROLL BUTTON END--}}
   {{-- jquery library js --}}
     <script src="{{asset('frontend/js/jquery-3.6.0.min.js')}}"></script>
