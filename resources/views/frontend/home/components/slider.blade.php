@@ -6,8 +6,6 @@
             <div class="col-12">
                 <div class="fp__banner_slider">
                     <div class=" container">
-
-
                         <div class="row">
                             <div class="col-xl-5 col-md-5 col-lg-5">
                                 <div class="fp__banner_img wow fadeInLeft" data-wow-duration="1s">
